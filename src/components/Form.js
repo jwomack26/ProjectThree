@@ -1,10 +1,9 @@
-import React, { useState } from "react";
 
+import React, { useState } from "react";
 function Form(props) {
   const [name, setName] = useState('');
 
-
-  function handleSubmit(e) {
+function handleSubmit(e) {
     e.preventDefault();
     if (!name.trim()) {
       return;
@@ -13,16 +12,15 @@ function Form(props) {
     setName("");
   }
 
-
   function handleChange(e) {
     setName(e.target.value);
   }
-
-  return (
-    <form onSubmit={handleSubmit}>
+  
+return (
+  <form onSubmit={handleSubmit}>
       <h2 className="label-wrapper">
         <label htmlFor="new-todo-input" className="label__lg">
-          What needs to be done?
+          WHAT NEEDS TO BE DONE?
         </label>
       </h2>
 
@@ -36,7 +34,7 @@ function Form(props) {
         onChange={handleChange}
       />
       <button type="submit" className="btn btn__primary btn__lg">
-        Add
+        ADD NEW TASK
       </button>
     </form>
   );

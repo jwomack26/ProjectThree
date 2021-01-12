@@ -1,8 +1,22 @@
 import React, { useState, useRef, useEffect } from "react";
+import Toolbar from "./components/Toolbar/Toolbar";
 import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
 import Todo from "./components/Todo";
 import { nanoid } from "nanoid";
+
+    {/* 
+  class App extends Component{
+  render(){
+    return(
+  <div className="App">
+  <Toolbar/>
+  </div>
+    );
+
+}
+    */}
+
 
 
 function usePrevious(value) {
@@ -21,11 +35,13 @@ const FILTER_MAP = {
 
 const FILTER_NAMES = Object.keys(FILTER_MAP);
 
+
 function App(props) {
   const [tasks, setTasks] = useState(props.tasks);
   const [filter, setFilter] = useState('All');
 
-  function toggleTaskCompleted(id) {
+  
+function toggleTaskCompleted(id) {
     const updatedTasks = tasks.map(task => {
       // if this task has the same ID as the edited task
       if (id === task.id) {
@@ -34,8 +50,11 @@ function App(props) {
         return {...task, completed: !task.completed}
       }
       return task;
+
+      
     });
     setTasks(updatedTasks);
+    
   }
 
 
@@ -115,6 +134,8 @@ function App(props) {
         {taskList}
       </ul>
     </div>
+
+    
   );
 }
 
