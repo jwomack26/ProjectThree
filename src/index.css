@@ -5,20 +5,19 @@
 *::after {
   box-sizing: border-box;
 }
-*:focus {
-  outline: 3px dashed #228bec;
-  outline-offset: 0;
-}
+
 html {
   font: 62.5% / 1.15 sans-serif;
 }
 h1,
 h2 {
   margin-bottom: 0;
+  color: #4e806f;
 }
 ul {
   list-style: none;
   padding: 0;
+
 }
 button {
   border: none;
@@ -58,8 +57,8 @@ body {
   width: 100%;
   max-width: 68rem;
   margin: 0 auto;
-  font: 1.6rem/1.25 Arial, sans-serif;
-  background-color: #f5f5f5;
+  font: 1.6rem/1.25 'Futura-Heavy';
+  background-color: #6d6e71;
   color: #4d4d4d;
 }
 @media screen and (min-width: 620px) {
@@ -76,17 +75,19 @@ body {
 }
 .btn {
   padding: 0.8rem 1rem 0.7rem;
-  border: 0.2rem solid #4d4d4d;
+  border: 0.2rem solid #7bacde;
   cursor: pointer;
   text-transform: capitalize;
+  color: #7bcfde;
 }
 .btn.toggle-btn {
   border-width: 1px;
-  border-color: #d3d3d3;
+  border-color: #79abdc;
+  color: #7bcfde;
 }
 .btn.toggle-btn[aria-pressed="true"] {
   text-decoration: underline;
-  border-color: #4d4d4d;
+  border-color: none;
 }
 .btn__danger {
   color: #fff;
@@ -98,7 +99,7 @@ body {
 }
 .btn__primary {
   color: #fff;
-  background-color: #000;
+  background-color: #7bcfde;
 }
 .btn-group {
   display: flex;
@@ -179,10 +180,11 @@ body {
   padding: 0.8rem;
   margin-bottom: 1rem;
   text-align: center;
+  color: #4e806f;
 }
 .input__lg {
   padding: 2rem;
-  border: 2px solid #000;
+  border: 2px solid #79abdc;
 }
 .input__lg:focus {
   border-color: #4d4d4d;
@@ -269,10 +271,7 @@ body {
   border: 2px solid currentColor;
   background: transparent;
 }
-.c-cb > input[type="checkbox"]:focus + label::before {
-  border-width: 4px;
-  outline: 3px dashed #228bec;
-}
+
 .c-cb > label::after {
   box-sizing: content-box;
   content: "";
@@ -287,6 +286,8 @@ body {
   border-top-color: transparent;
   opacity: 0;
   background: transparent;
+  color: #4dba6d;
+
 }
 .c-cb > input[type="checkbox"]:checked + label::after {
   opacity: 1;
