@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-function Form(props) {
+function Form2(props) {
   const [name, setName] = useState('');
 
 function handleSubmit(e) {
@@ -20,7 +20,7 @@ return (
   <form onSubmit={handleSubmit}>
       <h2 className="label-wrapper">
         <label htmlFor="new-todo-input" className="label__lg"> 
-          WHAT NEEDS TO BE DONE?
+          ENTER NEW CONTACT
         </label>
       </h2>
 
@@ -34,10 +34,10 @@ return (
         onChange={handleChange}
       />
       <button type="submit" className="btn btn__primary btn__lg">
-        ADD NEW TASK
+        ADD CONTACT
       </button>
     </form>
   );
 }
 
-export default Form;
+export default Form2;
