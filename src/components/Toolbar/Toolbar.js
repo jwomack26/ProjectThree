@@ -1,25 +1,26 @@
-import React from 'react';
+import React from "react";
+import { render } from "react-dom";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
-const toolbar = props => {
-return (
-    <header>
-        <nav>
-            <div></div>
-        <div class="apptitle">MY PLANNER</div>
-        <div>
-            <ul>
-            <li><a href="./Form.js">TO DO |</a> </li>
-            <li><a href="./Form2.js">CONTACTS |</a> </li>
-            <li><a href="/">CALENDAR</a> </li>
-            </ul>
+const ToDo = () => <div>Home</div>;
+const Contacts = () => <div>About</div>;
 
-        </div>
+const App = () => (
+  <BrowserRouter>
+    <div>
+      <ul>
+        <li>
+          <Link to="./Form.js">TO DO  |</Link>
+        </li>
+        <li>
+          <Link to="./Form2.js"> CONTACTS</Link>
+        </li>
 
-
-        </nav>
-
-        </header>
+      </ul>
+      <hr />
+      <Route exact path="./Form.js" component={ToDo} />
+      <Route path="./Form2" component={Contacts} />
+    </div>
+  </BrowserRouter>
 );
-
-}
-export default toolbar;
+export default App;

@@ -1,5 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
 
+import {render} from "react-dom";
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
+
+import { BrowserRouter} from "react-router-dom"
+
 import Toolbar from "./components/Toolbar/Toolbar";
 
 import Form from "./components/Form";
@@ -9,6 +19,8 @@ import FilterButton from "./components/FilterButton";
 import Todo from "./components/Todo";
 
 import { nanoid } from "nanoid";
+
+
 
 
 function usePrevious(value) {
@@ -204,7 +216,17 @@ function toggleTaskCompleted(id) {
 
     <div className="todoapp stack-large">
 
-      <Toolbar/>
+    <Toolbar/>
+
+  <div>
+    <BrowserRouter> 
+      <div>
+        <Route path="ToDo" render={(props) => <div>ToDo</div>}/> 
+        <Route path="Contacts" render={(props) => <div>Contacts</div>}/>
+      </div>
+    </BrowserRouter>
+  </div>
+
       
     <Form addTask={addTask} />
 
