@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import {BrowserRouter, Route} from "react-router-dom";
-import { Link } from 'react-router-dom'
 
 
 const DATA = [
@@ -21,8 +20,8 @@ ReactDOM.render(
 const App = () => (
 <BrowserRouter> 
 <div>
-  <Route path="/ToDo" render={(props) => <div>ToDo</div>}/> 
-  <Route path="/Contacts" render={(props) => <div>Contacts</div>}/>
+  <Route path="/Form" render={(props) => <div>ToDo</div>}/> 
+  <Route path="/Form2" render={(props) => <div>Contacts</div>}/>
 </div>
 </BrowserRouter>
 );
