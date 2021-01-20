@@ -1,9 +1,8 @@
 import React from "react";
-import { render } from "react-dom";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
 const ToDo = () => <div>Home</div>;
-const Contacts = () => <div>About</div>;
+const Contact = () => <div>About</div>;
 
 const App = () => (
   <BrowserRouter>
@@ -13,13 +12,13 @@ const App = () => (
           <Link to="./Form.js">TO DO  |</Link>
         </li>
         <li>
-          <Link to="./Form2.js"> CONTACTS</Link>
+          <Link to="./Form2.js"> CONTACT US</Link>
         </li>
 
       </ul>
       <hr />
       <Route exact path="./Form.js" component={ToDo} />
-      <Route path="./Form2" component={Contacts} />
+      <Route path="./Form2" component={Contact} />
     </div>
   </BrowserRouter>
 );

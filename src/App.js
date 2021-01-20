@@ -10,6 +10,8 @@ import Todo from "./components/Todo";
 
 import { nanoid } from "nanoid";
 
+import Contact from "./components/Contacts/Form2";
+
 
 
 
@@ -166,8 +168,7 @@ function toggleTaskCompleted(id) {
    
   ));
 
- 
-
+  
   function addTask(name) {
 
     const newTask = { id: "todo-" + nanoid(), name: name, completed: false };
@@ -208,6 +209,7 @@ function toggleTaskCompleted(id) {
 
     <Toolbar/>
 
+<Contact/>
 
 <Form addTask={addTask} />
 
@@ -238,6 +240,7 @@ function toggleTaskCompleted(id) {
       </ul>
 
     </div>
+
 
   );
 
