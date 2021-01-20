@@ -1,15 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 
-import {render} from "react-dom";
-
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
-
-import { BrowserRouter} from "react-router-dom"
-
 import Toolbar from "./components/Toolbar/Toolbar";
 
 import Form from "./components/Form";
@@ -218,17 +208,8 @@ function toggleTaskCompleted(id) {
 
     <Toolbar/>
 
-  <div>
-    <BrowserRouter> 
-      <div>
-        <Route path="ToDo" render={(props) => <div>ToDo</div>}/> 
-        <Route path="Contacts" render={(props) => <div>Contacts</div>}/>
-      </div>
-    </BrowserRouter>
-  </div>
 
-      
-    <Form addTask={addTask} />
+<Form addTask={addTask} />
 
       <div className="filters btn-group stack-exception">
 
