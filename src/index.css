@@ -31,7 +31,6 @@ html {
   padding: 0.8rem 1rem 0.7rem;
   border: 0.2rem solid #7bacde;
   margin-top: 10px;
-  
 }
 @media screen and (max-width: 620px) {
   .name{

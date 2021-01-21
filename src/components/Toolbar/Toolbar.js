@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
-const ToDo = () => <div>Home</div>;
-const Contact = () => <div>About</div>;
+const ToDo = () => <div>ToDo</div>;
+const Contact = () => <div>Contact</div>;
 
 const App = () => (
   <BrowserRouter>

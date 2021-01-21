@@ -209,8 +209,6 @@ function toggleTaskCompleted(id) {
 
     <Toolbar/>
 
-<Contact/>
-
 <Form addTask={addTask} />
 
       <div className="filters btn-group stack-exception">
