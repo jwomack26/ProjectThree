@@ -15,6 +15,7 @@ import Contact from "./components/Contacts/Form2";
 
 
 
+
 function usePrevious(value) {
 
   const ref = useRef();
@@ -207,7 +208,12 @@ function toggleTaskCompleted(id) {
 
     <div className="todoapp stack-large">
 
-    <Toolbar/>
+<img class="image" src={require('./components/Banner.png')} />
+
+
+    
+<Contact/>
+
 
 <Form addTask={addTask} />
 
@@ -243,6 +249,7 @@ function toggleTaskCompleted(id) {
   );
 
 }
+
 
  
 

@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
+import {render} from "react-dom";
 
-const ToDo = () => <div>ToDo</div>;
+const Form = () => <div>ToDo</div>;
 const Contact = () => <div>Contact</div>;
 
 const App = () => (
@@ -9,16 +10,18 @@ const App = () => (
     <div>
       <ul>
         <li>
-          <Link to="./Form.js">TO DO  |</Link>
+          <Link to={matchMedia.url + "/Form"}>TO DO  |</Link>
         </li>
         <li>
-          <Link to="./Form2.js"> CONTACT US</Link>
+          <Link to={matchMedia.url + "/Contact"}> CONTACT US</Link>
         </li>
 
       </ul>
       <hr />
-      <Route exact path="./Form.js" component={ToDo} />
-      <Route path="./Form2" component={Contact} />
+      <Route path={matchMedia.url + "/Form"} 
+      render={props => <div>ToDo</div>}/>
+      <Route path={matchMedia.url + "/Contact"} 
+      render={props => <div>Contact</div>}/>
     </div>
   </BrowserRouter>
 );
